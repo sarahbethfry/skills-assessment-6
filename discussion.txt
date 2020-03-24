@@ -1,0 +1,71 @@
+Runtime
+-------
+
+1. Runtime for does_string_contain_letter:
+
+O(n)
+
+2. Runtime for duplicate_letters:
+
+O(n^2)
+
+3. Runtime for duplicate_letters2:
+O(nm)
+
+
+Stacks and Queues
+-----------------
+
+
+1. Which would be a better data structure for creating a Stack: a Linked List or 
+   a built-in Python list? Explain why, referencing the runtime requirements for
+   Stack operations (push, pop, etc).
+
+* A Python List (if adding and removing from the end) - Stacks function as FIFO that means objects enter the same end that they are removed. If you use the append method to add items and pop method to remove then a python list is the best choice.
+
+
+2. Which would be a better data structure for creating a Queue: a Linked List or
+   a built-in Python list? Explain why, referencing the runtime requirements for
+   Queue methods (enqueue, dequeue, etc).
+
+* A doubly linked list - Since queues have to add to one end and remove from the other this is the most efficient solution. With a link list you can just change the pointer of the head node instead of adjusting the whole list in order to add or remove the first item.
+
+
+Trees
+-----
+
+1. Using the diagram in the instructions, in what order would a Breadth First
+   Search (BFS) algorithm visit each node  until finding burritos (starting at
+   food)?
+	- [food][italian,indian,mexican]
+	- [italian][indian, mexican, lasagna, pizza]
+	- [indian][mexican, lasagna, pizza, tikka masala, saag]
+	- [mexican][lasagna, pizza, tikka masala, saag, burritos, tacos, enchiladas]
+	- [lasagna][pizza, tikka masala, saag, burritos, tacos, enchiladas]
+	- [pizza][tikka masala, saag, burritos, tacos, enchiladas, thin crust, chi style, 			ny-style, sicillian]
+	- [tikka masala][saag, burritos, tacos, enchiladas, thin crust, chi syle, ny 				style, sicillian]
+	- [saag][burritos, tacos, enchiladas, thin crust, chi syle, ny 					style, sicillian]
+	- [burritos] [tacos, enchiladas, thin crust, chi syle, ny 					style, sicillian]
+
+2. Using the diagram in the instructions, In what order would a Depth First 
+   Search (DFS) algorithm visit each node until finding Chicago-style (starting
+   at food)? 
+	- [food][italian,indian,mexican]
+	- [mexican][italian, indian, burritos, tacos, enchiladas]
+	- [enchiladas][italian, indian, burritos, tacos]
+	- [tacos][italian, indian, burritos]
+	- [burritos][italian, indian]
+	- [indian][italia, tikka masala, saag]
+	- [saag][italian, tikka masala]
+	- [tikka masala][italian]
+	- [italian][lasagna, pizza]
+	- [pizza][lasagna, thin crust, chicago style, ny style, sicillian]
+	- [scillian][lasagna, thin crust, chicago style, ny style]
+	- [ny style][lasagna, thin crust, chicago style]
+	- [chi style][lasagna, thin crust]
+	
+
+3. How is a binary search tree different from other trees?
+	Each node only has a left and right child. Must be as balanced as possible.
+
+
